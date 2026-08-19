@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVERSING ARRAY USING RECURSION</title>
+    <!--Two  pointer Techique-->
+</head>
+<body>
+
+    <script>
+
+let Arr = [12 , 23, 45, , 13, 1, 0];
+let temp;
+
+function ReverseArray(Arr, start, end){
+    if(start>= end){ return Arr}
+    temp = Arr[start]
+    Arr[start] = Arr[end]
+    Arr[end] = temp;
+    
+    return ReverseArray(Arr, start+1, end-1)
+
+
+}
+ReverseArray(Arr, 0, Arr.length-1)
+console.log(Arr)
+document.write(`${Arr}`)
+
+    </script>
+    
+</body>
+</html>
